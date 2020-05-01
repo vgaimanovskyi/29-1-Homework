@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29_homework</title>
+    <style>
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-color: rgb(221, 214, 214);
+            border: 5px outset;
+            padding: 50px 15px;
+            line-height: 25px;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        #lights li {
+            width: 50px;
+            height: 50px;
+            display: block;
+            background-color: black;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Домашнее задание:</h2>
+    <ol>
+        <li>Создать страницу, которая выводит нумерованный список песен:
+            <ul id="play-list">
+            </ul>
+        </li>
+        <br>
+        <li>Создать HTML-страницу с кнопкой "Открыть" и модальным окном. На модальном окне должен быть текст и кнопка
+            "Закрыть". Изначально модальное окно не отображается. При клике на кнопку "Открыть" появляется модальное
+            окно, на кнопку "Закрыть" – исчезает.<br>
+            <button onclick="openModal('hiden')">Открыть</button>
+        </li>
+        <br>
+        <li>Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.<br>
+            <button onclick="changeLights(0);">Переключить</button>
+            <ul id="lights">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+    </ol>
+    <div class="modal">
+        <p>При клике на кнопку "Открыть" появляется модальное
+            окно, на кнопку "Закрыть" – исчезает.</p>
+        <button onclick="openModal()">Закрыть</button>
+    </div>
+    <script src="plugins/script.js"></script>
+</body>
+
+</html>
