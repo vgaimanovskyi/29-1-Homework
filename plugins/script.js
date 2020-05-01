@@ -41,17 +41,21 @@ function openModal(style) {
     }
 }
 // 3. Создать HTML-страницу со светофором и кнопкой, которая переключает светофор на следующий цвет.
-// !! eror !!
+// !! error !!
 let lights = document.getElementById("lights");
 let li = lights.children;
-function changeLights(n) {
-    console.log(n)
-    if (n === 0) {
-        li[0].style.background = "red";
-    } else if (n === 1) {
+let btn = document.getElementById("btnLights");
+btn.addEventListener("click", function addRed() {
+    li[0].style.background = "red";
+
+    btn.addEventListener("click", function addYellow() {
+        li[0].style.background = "black";
         li[1].style.background = "yellow";
-    } else {
-        li[2].style.background = "green";
-    }
-    n++;
-}
+
+        btn.addEventListener("click", function addGreen() {
+            li[0].style.background = "black";
+            li[1].style.background = "black";
+            li[2].style.background = "green";
+        });
+    });
+});
